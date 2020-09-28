@@ -2,7 +2,7 @@
     --dark: #31343e;
     --turquoise: #9eced0;
     --blue: #5d6b81;
-    --gray:  #eeeef9;
+    --gray:  #f7f4f6;
 }
 
 * {
@@ -27,12 +27,11 @@ h2 {
 
 /* apply styles to <header> */
 header {
-    background-color: var(--dark);
+    background-image: url("../images/techno.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: 80%;
     padding: 20px 35px;
-    background-color: var(--blue);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -45,7 +44,7 @@ header {
 header h1 {
     font-weight:bold;
     font-size: 36px;
-    color: var(--dark);
+    color: var(--gray);
     margin: 0;
     /* add alongside your existing declarations */
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -54,7 +53,7 @@ header h1 {
 
 header a {
     text-decoration: none;
-    color: var(--dark);
+    color: var(--gray);
 }
 
 header nav {
@@ -85,6 +84,11 @@ header nav ul li a:hover {
     text-shadow: none;
 }
 
+.self-portrait {
+    border: solid var(--dark) 1px;
+    box-shadow:  0 0 10px rgba(49, 51, 51, 0.5);
+}
+
 /* Hero Style Start */
 .hero {
     background-image: url("../images/techno.jpg");
@@ -101,9 +105,9 @@ header nav ul li a:hover {
 .hero img{
     width: 10%;
     height: 10%;
-    margin: 0px 30px;
+    margin: 30px 30px;
     border-radius: 15px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
     align-items: center;
     
 }
@@ -126,142 +130,394 @@ header nav ul li a:hover {
 }
 /* Hero CTA Style End */
 
-.about {
-    max-width: 90%; 
-    margin: 0 auto;
-    display: grid;
-    margin-bottom: 30px;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 20px;
-}
-
-.label {
-    border-right-style: solid;
-    border-right-width: 3px;
-    border-right-color: var(--blue);
-    padding-right: 15px;
-}
-
-.about p {
-    font-size: 20px;
-    grid-column: 2/span 2 ;
-    grid-row: 1/-1;
-}
-
-/* WORK STYLES BEGIN */
-
-.work-grid-container {
- max-width: 90%; 
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(3, 150px);
-  grid-gap: 20px;
-  
-}
-    
-.work-grid-item img {
-    
-    height: 100%;
-    border: solid;
-    color:var(--dark);
-    
-}
-
-.work-grid-item {
-    /* padding: 0; */
+.subtitle {
+    padding-right: 75px;
     color: var(--dark);
-}
-
-/* specific match */
-
-.work-grid-item.recent {
-    grid-column: 2/4 ;
-    grid-row: 1/3;
-}
-
-.work-grid-item.past1 {
-    grid-column: 4/5 ;
-    grid-row: 1/2;
-}
-.work-grid-item.past2 {
-    grid-column: 4/5 ;
-    grid-row: 2/3;
-}
-.work-grid-item.past3 {
-    grid-column: 2/3 ;
-    grid-row: 3/4;
-}
-.work-grid-item.past4 {
-    grid-column: 3/4 ;
-    grid-row: 3/4;
-}
-.work-grid-item.label {
-   
-    grid-column: 1/2;
-    grid-row: 1/4;
-    text-align: right;
-    
-} 
-
-
-
-/* .work-grid-item.cancel {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: bold;
-} */
-  
-
-#contact {
-    
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
+    text-shadow: 0 0 10px rgb(0, 243, 255, .5);
 }
 
-
-
-#contact a {
-    text-decoration: none;
-    color: var(--blue);
-}
-
-#contact nav {
-    margin: 7px 0;
-}
-
-#contact nav ul {
+.subtitle ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-  }
-
-
-#contact nav ul li a {
-    padding: 10px 15px;
-    font-weight: lighter;
-    font-size: 1.55vw;
-    
 }
 
-#contact nav ul li a:hover {
+.subtitle ul li {
+    padding: 20px;
+}
+
+.flex-row {
+    display: flex;
+}
+
+/* Section Title Styling Left Side */
+.section-title {
+    font-size: 26px;
+    color: var(--primary-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 25%;
+    text-shadow: 0 0 10px rgb(0, 243, 255, .5);
+}
+
+/* Right side content styling */
+.section-bio,
+.work-grid-wrapper,
+.contact-list {
+    font-size: 22px;
+    color: var(--primary-color);
+    display: flex;
+    padding: 20px 20px;
+    align-items: center;
+    margin: auto 20px auto 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 90%;
+    height: 300px;
+    border-left: 5px solid;
+    border-color: var(--primary-color);
+}
+
+.section-bio p {
+    background-color: var(--secondary-opacity);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Grid Styling */
+.work-grid-wrapper {
+    height: auto;
+}
+
+.work-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 70px 130px 130px 130px 130px 70px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    color: var(--tertiary-color);
+}
+
+/* Grid Item Styling */
+.work-item {
+    border: 4px solid var(--dark);
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    text-align: left;
+    border-style: solid;
+    border-color: #;
+    padding-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    text-decoration: none;
+}
+
+/* Hover Transition */
+.hover-effect::after {
+    content: "";
+     height: 100%;
+     width: 100%;
+     background: linear-gradient(rgba(0, 243, 255, 0.6), rgba(0, 135, 245, 0.8));
+     position: absolute;
+     top: 0;
+     left: 0;
+     opacity: 0;
+     transition: 0.5s;
+     
+}
+
+.work-item:hover .hover-effect::after {
+    opacity: 1.0;
+}
+
+/* Small Description Styling */
+.work-item-info {
     background: var(--dark);
-    color: var(--turquoise);
+    padding: 5px 5px;
+    color: var(--gray);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 9998;
+}
+
+/* Individual Grid Box Styling */
+.work-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 5;
+    background-image: url(../images/covid-ca-pic.PNG);
+    background-position: fixed;
+}
+
+.work-2 {
+    grid-column: 1 / 2;
+    grid-row: 5 / 7;
+    background-image: url(../images/git-it-done-pic.png);
+    background-position: bottom;
+}
+
+.work-3 {
+    grid-column: 2 / 3;
+    grid-row: 5 / 7;
+    background-image: url(../images/taskmaster-pro-pic.png);
+}
+
+.work-4 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    background-image: url(../images/weather-dashboard-pic.png);
+    background-position: 80%;
+}
+
+.work-5 {
+    background-image: url(../images/run-buddy-pic.jpg);
+    background-position: 80%;
+    grid-column: 3 / 4;
+    grid-row: 3 / 5;
+}
+
+
+/* Contact List Styling */
+.contact-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.contact-list ul li a {
+    color: var(--primary-color);
+    padding: 20px 30px;
+    font-weight: bold;
+    font-size: 1.65vw;
+}
+
+/* Contact List Hover */
+.contact-list ul li a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
     border-radius: 15px;
     text-shadow: none;
 }
 
-#contact footer {
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: repeat(2, 200px);
-  /* grid-template-rows: repeat(3, 150px); */
-  grid-gap: 10px;
+/* Media Queries */
+@media screen and (max-width: 1350px) {
+    header {
+        justify-content: center;
+        position: relative;
+        background-color: var(--turquoise);
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav {
+        padding: 0px;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+    .section-bio {
+        padding: 0px;
+        height: 80%;
+        
+        align-items: flex-start
+    }
+
+    .subtitle {
+        padding: 0px;
+    }
+
+    .subtitle ul {
+        width: 100%;
+        align-items: center;
+        list-style: none;
+    }
+    
+    .subtitle ul li {
+        padding: 10px;
+    }
+
+    .hero-portrait, .hero-subtitle {
+        width: 100%;
+        align-items: flex-end;
+        /* justify-content: center; */
+        padding: 0px;
+        text-align: center;
+    }
+
+    .contact-list {
+        padding: 0px;
+    }
+}  
+
+    
+@media screen and (max-width: 775px) {
+    header nav ul li a:hover {
+        background: none;
+        color: var(--primary-color);
+        border-radius: 15px;
+        text-shadow: none;
+    }
+
+    .flex-row {
+        display: block;
+    }
+
+    .section-bio,
+    .work-grid-wrapper,
+    .contact-list {
+        border-left: none;
+        border-top: solid;
+        margin: auto;
+    }
+
+    .section-title {
+        flex: 1;
+        width: 50%;
+        text-align: center;
+        align-items: center;
+        padding: 20px 0px 10px 0px;
+        display: block;
+        margin: auto; 
+    }
+
+    .section-bio {
+        padding: 0px;
+        height: 80%;
+        text-align: center;
+    }
+
+    .work-grid-wrapper {
+        height: auto;
+    }
+
+    .work-grid-container {
+        grid-template-columns: repeat(6, 90px);
+        grid-template-rows: 130px 130px 130px 130px;
+    }
+
+    .work-item {
+        padding-bottom: 30px;
+        padding-right: 20px;
+    }
+
+    .hover-effect::after {
+        display: none;
+    }
+
+    .work-1 {
+        grid-column: 1 / 5;
+        grid-row: 1 / 3;
+        padding-bottom: 70px;
+    }
+
+    .work-2 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 5;
+    }
+
+    .work-3 {
+        grid-column: 5 / 7;
+        grid-row: 1 / 3;
+    }
+
+    .work-4 {
+        grid-column: 3 / 5;
+        grid-row: 3 / 5;
+    }
+
+    .work-5 {
+        grid-column: 5 / 7;
+        grid-row: 3 / 5;
+    }
+
+    .contact-list {
+        padding: 20px;
+    }
+
+    .contact-list ul {
+        justify-content: center;
+    }
+
+    .contact-list ul li a {
+        display: flex;
+        font-size: 20px;
+    }
 }
 
+ @media screen and (max-width: 575px) {
+    header {
+        height: 200px;
+        background-color: var(--turquoise);
+    }
+    .hero-portrait {
+        background-color: var(--turquoise);
+    }
+    header nav ul {
+        justify-content: space-between;
+        height: 100px;
+        
+    }
+
+    header nav ul li a {
+        padding: 5px 10px;
+        color: var(--dark)
+    }
+    
+    header a {
+        color: var(--dark)
+    
+    }
+
+    .hero-cta h2 {
+        color: var(--dark);
+        font-size: 15px;
+    }
+
+    .subtitle ul {
+        padding: 0px;
+        justify-content: center;
+    }
+
+    .subtitle li {
+        padding: 10px;
+    }
+
+    .section-bio {
+        height: 80%;
+    }
+
+    .hero-subtitle {
+       height: 200px;
+    }
+    .work-grid-wrapper {
+        height: 1200px;
+    }
+    .work-grid-container {
+       grid-template-rows: repeat(5, 200px);
+       grid-template-columns: 300px
+    }
+
+    .work-item {
+        grid-row: auto;
+        grid-column: auto;
+    }
+ }
