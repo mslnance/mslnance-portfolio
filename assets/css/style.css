@@ -273,7 +273,7 @@ header nav ul li a:hover {
 .work-4 {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
-    background-image: url(../images/weather-dashboard-pic.PNG);
+    background-image: url(../images/actively-distanced-pic.PNG);
     background-position: 80%;
 }
 
